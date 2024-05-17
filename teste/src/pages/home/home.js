@@ -3,7 +3,7 @@ const statusBarHeight = StatusBar.currentHeight;
 
 export default function Home(){
     return (
-        <SafeAreaView>style={styles.container}
+        <SafeAreaView style={styles.container}>
 
         <ScrollView>
 
@@ -33,7 +33,7 @@ export default function Home(){
     );
 }
 
-const style =StyleSheet.create({
+const styles =StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'black',
@@ -49,5 +49,5 @@ const style =StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
 
-    }
+    },
 })

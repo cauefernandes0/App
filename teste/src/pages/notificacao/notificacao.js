@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Favorites () {
+export default function Notificacao () {
     return (
         <View styles ={styles.container}>
             <Text>Pagina Notificação</Text>
