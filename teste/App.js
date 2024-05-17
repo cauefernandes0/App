@@ -58,9 +58,18 @@ export default function App() {
       >
       <Animated.Image source={require('./images/logo.png')}
       style={{
-        
-        width: 80,
-        height: imageScaleHeight, 
+        position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndx: 99,
+          width: '100%',
+          height: imageScaleHeight,
+          padding: 10,
+          backgroundColor:"#4e5283",
+          allingItems: 'center',
+          justifyContent: 'center',
+          overflow: 'hidden'
       }}
       resizeMode='contain'
       />
