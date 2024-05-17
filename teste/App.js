@@ -11,8 +11,9 @@ export default function App(){
   return (
     <SafeAreaView>
       <ScrollView>
-        <Routes/>
+        
         <Animacao/>
+        <Routes/>
         
       </ScrollView>
     </SafeAreaView>

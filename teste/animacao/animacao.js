@@ -96,7 +96,12 @@ export default function Animacao() {
         scrollEventThrottle={16}
       />
       <View>
-        <Image source={{require('./')}}
+        <Image source={require('./../images/procurar.png')}
+            style={{
+                position: 'absolute',
+                width:80
+            }}
+        
         />
     
       </View>
