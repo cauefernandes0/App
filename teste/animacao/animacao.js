@@ -98,8 +98,11 @@ export default function Animacao() {
       <View>
         <Image source={require('./../images/procurar.png')}
             style={{
-                position: 'absolute',
-                width:80
+                flex:1,
+                height:150,
+                width:80,
+                
+                
             }}
         
         />
