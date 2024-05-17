@@ -104,7 +104,17 @@ export default function Animacao() {
                 
                 
             }}
+            
         
+        />
+        <Image source={require('./../images/silhueta-de-mulher.png')}
+            style={{
+                flex:1,
+                height:150,
+                width:80,
+                
+                
+            }}
         />
     
       </View>
