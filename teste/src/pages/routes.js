@@ -13,8 +13,8 @@ const Tab = createBottomTabNavigator();
 
 function Routes() {
     return(
-
-        <NavigationContainer>
+        //Acho uma boa colocar imagem em vez dos nomes, se conseguir, ai fica igual a gnt tinha pensado
+        
             <Tab.Navigator>
                 <Tab.Screen
                 name="Home"
@@ -42,7 +42,7 @@ function Routes() {
                 />
             </Tab.Navigator>
             
-        </NavigationContainer>
+        
     )
 }
 
