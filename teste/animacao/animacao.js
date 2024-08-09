@@ -74,11 +74,22 @@ export default function Animacao() {
       }}
       resizeMode='contain'
       />
+      
       </Animated.View>
+      <View style={styles.container}>
+        <Image source={require('./../images/procurar.png')}
+              style={styles.search}
+        
+        />
+        <Image source={require('./../images/silhueta-de-mulher.png')}
+            style={styles.search}   
+        />
+    
+      </View>
       {/* <Text style={styles.title}>Ofertas de Trabalho</Text> */}
       <FlatList
         style={{
-            paddingTop: H_MAX_HEIGHT,
+           
         }}
         data={data}
         horizontal
@@ -95,29 +106,7 @@ export default function Animacao() {
         ], { useNativeDriver: false})}
         scrollEventThrottle={16}
       />
-      <View>
-        <Image source={require('./../images/procurar.png')}
-            style={{
-                flex:1,
-                height:150,
-                width:80,
-                
-                
-            }}
-            
-        
-        />
-        <Image source={require('./../images/silhueta-de-mulher.png')}
-            style={{
-                flex:1,
-                height:150,
-                width:80,
-                
-                
-            }}
-        />
-    
-      </View>
+      
     </View>
    
    
@@ -149,6 +138,21 @@ const styles = StyleSheet.create({
     paddingRight: 30,
     fontWeight: 'bold',
     margin:8,
+  },
+  container: {
+    flexDirection: 'row',
+    marginTop: 180,
+    marginBottom:50,
+    marginHorizontal:-120,
+    
+  },
+  search: {
+    flex:1,
+    resizeMode: 'contain',
+    height:50,
+    flexDirection: 'column',
+
+
   },
   title:{
     fontSize: 22,

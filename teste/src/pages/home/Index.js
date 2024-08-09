@@ -3,27 +3,27 @@ const statusBarHeight = StatusBar.currentHeight;
 
 export default function Home(){
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={styles.content}>
 
         <ScrollView>
 
-            <View styles={styles.container}>
+            <View styles={styles.content}>
             <Text>Conteúdo</Text>
             </View>
 
-            <View styles={styles.container}>
+            <View styles={styles.content}>
             <Text>Conteúdo</Text>
             </View>
 
-            <View styles={styles.container}>
+            <View styles={styles.content}>
             <Text>Conteúdo</Text>
             </View>
 
-            <View styles={styles.container}>
+            <View styles={styles.content}>
             <Text>Conteúdo</Text>
             </View>
 
-            <View styles={styles.container}>
+            <View styles={styles.content}>
             <Text>Conteúdo</Text>
             </View>
 

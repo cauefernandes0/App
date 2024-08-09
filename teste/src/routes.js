@@ -1,11 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import Home from './home/home';
-import Buscar  from './buscar/buscar';
-import AddTrabalho from './addtrabalho/addtrabalho';
-import Favoritos from './favoritos/favoritos';
-import Notificacao from './notificacao/notificacao';
-import Perfil from './perfil/perfil';
+import Home from './pages/home/Index';
+import Buscar  from './pages/buscar/buscar';
+import AddTrabalho from './pages/addtrabalho/addtrabalho';
+import Favoritos from './pages/favoritos/favoritos';
+import Notificacao from './pages/notificacao/notificacao';
+import Perfil from './pages/perfil/perfil';
 import { NavigationContainer } from '@react-navigation/native';
 
 
