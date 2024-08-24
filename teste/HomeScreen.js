@@ -6,6 +6,9 @@ import * as Icon from "react-native-feather";
 import { themeColors } from './index';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Categories from './src/pages/categories';
+import FeaturedRow from './src/pages/featuredrow';
+import { featured } from './constantes';
+
 export default function HomeScreen(){
     return (
       /* Hex Colors
@@ -39,9 +42,27 @@ export default function HomeScreen(){
         >
             {/*Categorias */}
             <Categories/>
+
+            {/*Features */}
+
+            <View className="mt-5">
+              {
+                [featured, featured, featured].map((item,index)=>{
+                  return(
+                    <FeaturedRow
+                    key={index}
+                    title = {item.title}
+                    options={item.options}
+                    description={item.description}
+                    />
+                  )
+                })
+              }
+
+            </View>
         </ScrollView>
         
-          <Animacao/>
+         
           
           <Routes/>
           
