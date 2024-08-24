@@ -1,8 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import * as Icon from "react-native-feather";
+import { themeColors } from "../../../index";
 
 export default function Buscar () {
     return (
-        /* Barra de pesquisa */
+        <SafeAreaView>
+        {/* Barra de pesquisa */}
         <View className="flex-row items-center space-x-2 px-4 pb-2">
             <View className="flex-row flex-1 items-center p-3 rounded-full border border-gray-30">
               <Icon.Search height="25" width="25" stroke="gray"/>
@@ -12,11 +15,21 @@ export default function Buscar () {
                 <Text className="text-gray-600">São Paulo, SP</Text>
 
             </View>
-            <View className="p-3 bg-gray-300 rounded-full">
+            <View style={{backgroundColor: themeColors.bgColor(1)}} className="p-3 bg-gray-300 rounded-full">
                 <Icon.Sliders height="20" width="20" strokeWidth={2.5} stroke="white"/>
             </View>
           </View>
-          
+        {/* Parte principal */}
+        <ScrollView showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+            paddingBottom: 20
+        }}
+        >
+            {/*Categorias */}
+        </ScrollView>
+          </SafeAreaView>
+
+        
     );
 }
 
