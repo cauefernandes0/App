@@ -7,7 +7,7 @@ import { themeColors } from './index';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Categories from './src/pages/categories';
 import FeaturedRow from './src/pages/featuredrow';
-import { featured } from './constantes';
+import { featured } from './constantes/index';
 
 export default function HomeScreen(){
     return (

@@ -39,7 +39,7 @@ export const featured = {
         {
             id:1,
             name: 'Joana Oliveira',
-            image: require('../assets/imagens/encanamento.jpg'),
+            image: require('../assets/imagens/carro.jpg'),
             description: "Problema com encanamento? É so me chamar!",
             loc:'São Paulo - SP',
             stars: 4,
@@ -50,7 +50,7 @@ export const featured = {
         {
             id:2,
             name: 'Gabriela Tomieto',
-            image: require('../assets/imagens/academia.png'),
+            image: require('../assets/imagens/carro.jpg'),
             description: "Vamos queimar essas gorduras!",
             loc:'Taubaté - SP',
             stars: 3,
@@ -69,5 +69,6 @@ export const featured = {
             category: 'Domésticos',
 
         },
-    ]
+    ],
+   
 }

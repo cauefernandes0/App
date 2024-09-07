@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Home from './pages/home/Index';
-import Buscar  from './pages/buscar/buscar';
+
 import AddTrabalho from './pages/addtrabalho/addtrabalho';
 import Favoritos from './pages/favoritos/favoritos';
 import Notificacao from './pages/notificacao/notificacao';
@@ -14,7 +14,7 @@ const Tab = createBottomTabNavigator();
 function Routes() {
     return(
 
-        <NavigationContainer>
+        
             <Tab.Navigator>
                 <Tab.Screen
                 name="Home"
@@ -29,10 +29,6 @@ function Routes() {
                 component={Favoritos}
                 />
             <Tab.Screen
-                name="Buscar"
-                component={Buscar}
-                />
-            <Tab.Screen
                 name="Perfil"
                 component={Perfil}
                 />
@@ -42,7 +38,7 @@ function Routes() {
                 />
             </Tab.Navigator>
             
-        </NavigationContainer>
+       
     )
 }
 
