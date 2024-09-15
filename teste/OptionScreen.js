@@ -1,15 +1,16 @@
 import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView} from "react-native";
-import { categories } from "../../constantes";
+import { categories } from "./constantes";
 import { useState } from "react";
-import { featured } from "../../constantes";
-import { themeColors } from "../../index";
+import { featured } from "./constantes";
+import { themeColors } from "./index";
 import * as Icon from "react-native-feather";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import {useRoute} from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-
-export default function OptionScreen () {
+export default function OptionScreen() {
+    const Stack = createNativeStackNavigator();
     const {params} = useRoute();
     const navigation = useNavigation();
     let item = params;
@@ -17,7 +18,11 @@ export default function OptionScreen () {
 
     return (
         <View>
+            
             <ScrollView>
+                
+               
+                
                 <View className="relative">
                     <Image className='w-full h-72' source={item.image}/>
                     <TouchableOpacity 
@@ -34,7 +39,7 @@ export default function OptionScreen () {
                         <Text className='text-3xl font-bold'>{item.name}</Text>
                         <View className='flex-row space-x-2 my-1'>
                             <View className='flex-row items-center space-x-1'>
-                            <Image source={require("../../assets/imagens/star.png")} className="h-4 w-4"/>
+                            <Image source={require("./assets/imagens/star.png")} className="h-4 w-4"/>
                             <Text className="text-xs">
                                 <Text className="text-green-700">{item.stars}</Text>
                                 <Text className="text-gray-700">({item.reviews} review) . <Text className="font-semibold">{item.category}</Text>
@@ -53,7 +58,9 @@ export default function OptionScreen () {
                 <Text className='px-4 py-4 text-2xl font-bold'>Menu</Text>
             </View>
             </ScrollView>
+            
         </View>
+        
     );
 }
 

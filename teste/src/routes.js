@@ -7,37 +7,18 @@ import Favoritos from './pages/favoritos/favoritos';
 import Notificacao from './pages/notificacao/notificacao';
 import Perfil from './pages/perfil/perfil';
 import { NavigationContainer } from '@react-navigation/native';
+import OptionScreen from '../OptionScreen';
+import TabRoutes from './TabRoutes';
+import StackRoutes from './StackRoutes'
 
 
 const Tab = createBottomTabNavigator();
 
 function Routes() {
     return(
-
+        <TabRoutes/>
         
-            <Tab.Navigator>
-                <Tab.Screen
-                name="Home"
-                component={Home}
-                />
-            <Tab.Screen
-                name="AddTrabalho"
-                component={AddTrabalho}
-                />
-                <Tab.Screen
-                name="Favoritos"
-                component={Favoritos}
-                />
-            <Tab.Screen
-                name="Perfil"
-                component={Perfil}
-                />
-            <Tab.Screen
-                name="Notificacao"
-                component={Notificacao}
-                />
-            </Tab.Navigator>
-            
+
        
     )
 }

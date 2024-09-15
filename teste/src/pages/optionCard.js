@@ -8,14 +8,16 @@ import * as Icon from "react-native-feather";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationContainer } from '@react-navigation/native';
+import OptionScreen from "../../OptionScreen";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 export default function OptionCard({item}) {
-    const navigation = useNavigation();
+    const navigation = useNavigation()
+    
     return (
-       
         <TouchableWithoutFeedback 
-        onPress={()=> navigation.navigate('Option',{...item})}    
+        onPress={() => navigation.navigate('Option',{...item})}    
         >
             <View style={{
                 shadowColor: themeColors.bgColor(0.2),
