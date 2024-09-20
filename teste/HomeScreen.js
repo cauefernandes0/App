@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, FlatList, Animated,ScrollView, Image, TextInput } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import Routes from './src/routes.js';
+
 import Animacao from "./animacao/animacao";
 import * as Icon from "react-native-feather";
 import { themeColors } from './index';
@@ -64,7 +64,6 @@ export default function HomeScreen(){
         
          
           
-          <Routes/>
           
         
       </SafeAreaView>

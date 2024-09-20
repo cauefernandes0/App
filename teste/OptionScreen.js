@@ -28,7 +28,7 @@ export default function OptionScreen() {
                     <TouchableOpacity 
                     onPress={() => navigation.goBack()}
                     className='absolute top-14 left-4 bg-gray-50 p-2 rounded-full shadow'>
-                        <Icon.ArrowLeft strokeWidth={3} stroke={themeColors.bgcolor(1)} />
+                        <Icon.ArrowLeft strokeWidth={3} stroke={themeColors.bgColor(1)} />
                     </TouchableOpacity>
 
                 </View>
