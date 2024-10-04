@@ -10,7 +10,7 @@ import {useRoute} from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export default function OptionScreen() {
-    const Stack = createNativeStackNavigator();
+    
     const {params} = useRoute();
     const navigation = useNavigation();
     let item = params;

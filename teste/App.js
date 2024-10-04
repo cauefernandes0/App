@@ -17,7 +17,7 @@ export default function App(){
     
       <ScrollView>
         
-        <Navigation/>
+        <Navigation />
         
       </ScrollView>
     
