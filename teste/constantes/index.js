@@ -32,6 +32,7 @@ export const categories = [
 ]
 
 export const featured = {
+    
     id:1,
     title: 'Para Casa',
     description: "Encanamento, parte elétrica, limpeza",
@@ -41,10 +42,27 @@ export const featured = {
             name: 'Joana Oliveira',
             image: require('../assets/imagens/carro.jpg'),
             description: "Problema com encanamento? É so me chamar!",
+            inf: "Resido na Zona Norte de São Paulo, porém vou até qualquer localização! Caso seja necessário qualquer contato mais específico, tenho também meu WhatsApp. Em caso de necessidade de atuação à noite, o valor do trabalho pode variar, porém sempre negocio para o melhor de todos ",
             loc:'São Paulo - SP',
             stars: 4,
             reviews: "2.5 mil",
             category: 'Domésticos',
+            trabalhos: [
+                {
+                id: 1,
+                name:'Encanamentos de Pia',
+                description: ' Ooioi',
+                price: 70,
+                image: require('../assets/imagens/macarrao.jpeg')
+                },
+                {
+                    id: 2,
+                    name:'Outros tipos',
+                    description: ' Ooioi',
+                    price: 70,
+                    image: require('../assets/imagens/macarrao.jpeg')
+                    },
+            ]
 
         },
         {
@@ -52,10 +70,27 @@ export const featured = {
             name: 'Gabriela Tomieto',
             image: require('../assets/imagens/carro.jpg'),
             description: "Vamos queimar essas gorduras!",
+            inf: "Resido na Zona Norte de São Paulo",
             loc:'Taubaté - SP',
             stars: 3,
             reviews: "1.2 mil",
             category: 'Academia',
+            trabalhos: [
+                {
+                id: 1,
+                name:'Encanamentos de Pia',
+                description: ' Ooioi',
+                price: 70,
+                image: require('../assets/imagens/macarrao.jpeg')
+                },
+                {
+                    id: 2,
+                    name:'Outros tipos',
+                    description: ' Ooioi',
+                    price: 70,
+                    image: require('../assets/imagens/macarrao.jpeg')
+                    },
+            ]
 
         },
         {
@@ -63,10 +98,27 @@ export const featured = {
             name: 'Guilhermina Damacenico',
             image: require('../assets/imagens/carro.jpg'),
             description: "Te levo para qualquer lugar!",
+            inf: "Resido na Zona Norte de São Paulo",
             loc:'Rio de Janeiro - RJ',
             stars: 5,
             reviews: "2.5 mil",
             category: 'Domésticos',
+            trabalhos: [
+                {
+                id: 1,
+                name:'Encanamentos de Pia',
+                description: ' Ooioi',
+                price: 70,
+                image: require('../assets/imagens/macarrao.jpeg')
+                },
+                {
+                    id: 2,
+                    name:'Outros tipos',
+                    description: ' Ooioi',
+                    price: 70,
+                    image: require('../assets/imagens/macarrao.jpeg')
+                    },
+            ]
 
         },
     ],

@@ -14,12 +14,9 @@ const H_SCROLL_DISTANCE = H_MAX_HEIGHT - H_MIN_HEIGHT;
 
 export default function App(){
   return (
-    
-      <ScrollView>
-        
+
         <Navigation />
         
-      </ScrollView>
     
    
   )

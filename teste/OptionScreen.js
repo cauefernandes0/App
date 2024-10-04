@@ -8,6 +8,7 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import {useRoute} from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import TrabalhoRow from "./src/pages/trabalhoRow";
 
 export default function OptionScreen() {
     
@@ -55,7 +56,13 @@ export default function OptionScreen() {
                 </View>
             </View>
             <View className='pb-36 bg-white'>
-                <Text className='px-4 py-4 text-2xl font-bold'>Menu</Text>
+                <Text className='px-4 py-4 text-2xl font-bold'>Mais Informações</Text>
+                <Text className="px-4 py-2"> {item.inf}</Text>
+                <Text className='px-4 py-4 text-2xl font-bold'>Opções</Text>
+                {
+                    item.trabalhos.map((trabalho,index)=> <TrabalhoRow item={{...trabalho}} key={index} />)
+                }
+
             </View>
             </ScrollView>
             
