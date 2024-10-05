@@ -1,14 +1,11 @@
-import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView} from "react-native";
-import { categories } from "./constantes";
-import { useState } from "react";
-import { featured } from "./constantes";
+import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView, StatusBar} from "react-native";
 import { themeColors } from "./index";
 import * as Icon from "react-native-feather";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import {useRoute} from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TrabalhoRow from "./src/pages/trabalhoRow";
+import CartIcon from "./src/pages/cartIcon";
 
 export default function OptionScreen() {
     
@@ -19,7 +16,8 @@ export default function OptionScreen() {
 
     return (
         <View>
-            
+            <CartIcon/>
+            <StatusBar style="light"/>
             <ScrollView>
                 
                

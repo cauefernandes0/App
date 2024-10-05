@@ -5,6 +5,7 @@ import { View, Text} from 'react-native';
 import React from 'react';
 import HomeScreen from './HomeScreen';
 import OptionScreen from './OptionScreen';
+import CartScreen from './CartScreen';
 
 export default function Navigation(){
     return(
@@ -14,6 +15,7 @@ export default function Navigation(){
             }}>
                 <Stack.Screen name="Home" component={HomeScreen}/>
                 <Stack.Screen name="Option" component={OptionScreen}/>
+                <Stack.Screen name='Cart'options={{presentation: 'modal'}} component={CartScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     )
