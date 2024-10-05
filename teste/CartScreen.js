@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity,Image} from 'react-native';
+import { View, Text, TouchableOpacity,Image, ScrollView} from 'react-native';
 import React from 'react';
 import { themeColors } from './index';
 import * as Icon from "react-native-feather";
@@ -28,8 +28,31 @@ export default function CartScreen(){
             className="flex-row px-4 items-center">
                 <Image source={require('./assets/imagens/womandrive.png')}
                 className="w-20 h-20"></Image>
-
+                <Text className='flex-1 pl-4'>Chegada em 20-30 minutos</Text>
+                <TouchableOpacity>
+                    <Text className="font-bold" style={{color:themeColors.text}}>Modificar</Text>
+                </TouchableOpacity>
             </View>
+             {/*Trabalhos*/}
+             <ScrollView showsVerticalScrollIndicator={false}
+            contentContainerStyle={{paddingBottom:50}}
+            className="bg-white pt-5">
+                {
+                    work.trabalhos.map((trabalho, index)=> {
+                        return(
+                            <View key={index}
+                            className="flex-row items-center space-x-3 py-2 px-4 rounded-3xl mx-2 mb-3 shadow-md"
+                            style={{backgroundColor: "#f2f2f2"}}>
+                            
+                            <Image className="h-14 w-14 rounded-full" source={trabalho.image}/>
+                            <Text className="flex-1 font-bold text-gray-700">{trabalho.name}</Text>
+                            <Text className="font-semibold text-base">R${trabalho.price}</Text>
+                            </View>
+                        )
+                    })
+                }
+            </ScrollView>
+            
         </View>
     )
 }
