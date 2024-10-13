@@ -5,12 +5,21 @@ import { featured } from './constantes';
 import MapView, {Marker} from 'react-native-maps';
 import { themeColors } from './index';
 import * as Icon from "react-native-feather";
+import { useDispatch, useSelector } from 'react-redux';
+import { selectOption } from './src/pages/slices/optionSlice';
+import { emptyCart } from './src/pages/slices/cartSlice';
 
 
 
 export default function Delivery(){
-    const work = featured.options[0];
+    const work = useSelector(selectOption);
     const navigation = useNavigation();
+    const dispatch= useDispatch();
+
+    const cancelOrder= ()=>{
+        navigation.navigate('Home');
+        dispatch(emptyCart());
+    }
     return(
         <View className="flex-1">
             {/*map view*/}
@@ -61,7 +70,7 @@ export default function Delivery(){
                         <TouchableOpacity className="bg-white p-2 rounded-full">
                             <Icon.Phone fill={themeColors.bgColor(1)} strokeWidth={1} stroke={themeColors.bgColor(1)}/>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={()=> navigation.navigate('Home')}
+                        <TouchableOpacity onPress={cancelOrder}
                          className="bg-white p-2 rounded-full">
                             <Icon.X fill={themeColors.bgColor(1)} strokeWidth={4} stroke= 'red'/>
                         </TouchableOpacity>

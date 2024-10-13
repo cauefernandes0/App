@@ -6,13 +6,22 @@ import { useNavigation } from "@react-navigation/native";
 import {useRoute} from '@react-navigation/native'
 import TrabalhoRow from "./src/pages/trabalhoRow";
 import CartIcon from "./src/pages/cartIcon";
+import {useEffect} from 'react';
+import { useDispatch } from "react-redux";
+import { setOption } from "./src/pages/slices/optionSlice";
 
 export default function OptionScreen() {
     
     const {params} = useRoute();
     const navigation = useNavigation();
     let item = params;
+    const dispatch = useDispatch();
      // console.log('Opções:',item)
+    useEffect(()=>{
+        if(item && item.id){
+            dispatch(setOption({...item}))
+        }
+    },[])
 
     return (
         <View>
