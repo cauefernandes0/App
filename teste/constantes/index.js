@@ -34,13 +34,13 @@ export const categories = [
 export const featured = {
     
     id:1,
-    title: 'Para Casa',
+    title: 'Cuidar de Casa',
     description: "Encanamento, parte elétrica, limpeza",
     options: [
         {
             id:1,
             name: 'Joana Oliveira',
-            image: require('../assets/imagens/carro.jpg'),
+            image: require('../assets/imagens/pia.jpg'),
             description: "Problema com encanamento? É so me chamar!",
             inf: "Resido na Zona Norte de São Paulo, porém vou até qualquer localização! Caso seja necessário qualquer contato mais específico, tenho também meu WhatsApp. Em caso de necessidade de atuação à noite, o valor do trabalho pode variar, porém sempre negocio para o melhor de todos ",
             loc:'São Paulo - SP',
@@ -48,21 +48,21 @@ export const featured = {
             lat:  -23.550182020788736,
             stars: 4,
             reviews: "2.5 mil",
-            category: 'Domésticos',
+            category: 'Diário',
             trabalhos: [
                 {
                 id: 1,
                 name:'Encanamentos de Pia',
-                description: ' Ooioi',
+                description: 'Especialmente de Pia',
                 price: 70,
-                image: require('../assets/imagens/macarrao.jpeg')
+                image: require('../assets/imagens/svspia.jpeg')
                 },
                 {
                     id: 2,
                     name:'Outros tipos',
-                    description: ' Ooioi',
+                    description: 'Outros tipos de encanamentos',
                     price: 70,
-                    image: require('../assets/imagens/macarrao.jpeg')
+                    image: require('../assets/imagens/svspia2.jpeg')
                     },
             ]
 
@@ -70,11 +70,11 @@ export const featured = {
         {
             id:2,
             name: 'Gabriela Tomieto',
-            image: require('../assets/imagens/carro.jpg'),
+            image: require('../assets/imagens/personal.jpg'),
             description: "Vamos queimar essas gorduras!",
             inf: "Resido na Zona Norte de São Paulo",
-            lng: 46.38119,
-            lat:  -23.33059,
+            lng: -45.56547026725932,
+            lat:  -23.043776996797313,
             loc:'Taubaté - SP',
             stars: 3,
             reviews: "1.2 mil",
@@ -82,18 +82,11 @@ export const featured = {
             trabalhos: [
                 {
                 id: 1,
-                name:'Encanamentos de Pia',
-                description: ' Ooioi',
+                name:'Personal Trainer',
+                description: 'Ajuda nos exercícios e execuções',
                 price: 70,
-                image: require('../assets/imagens/macarrao.jpeg')
+                image: require('../assets/imagens/acads.jpg')
                 },
-                {
-                    id: 2,
-                    name:'Outros tipos',
-                    description: ' Ooioi',
-                    price: 70,
-                    image: require('../assets/imagens/macarrao.jpeg')
-                    },
             ]
 
         },
@@ -112,17 +105,17 @@ export const featured = {
             trabalhos: [
                 {
                 id: 1,
-                name:'Encanamentos de Pia',
-                description: ' Ooioi',
-                price: 70,
-                image: require('../assets/imagens/macarrao.jpeg')
+                name:'Viagem na cidade',
+                description: 'Te levo pela cidade',
+                price: 15,
+                image: require('../assets/imagens/uber.jpg')
                 },
                 {
                     id: 2,
-                    name:'Outros tipos',
-                    description: ' Ooioi',
-                    price: 70,
-                    image: require('../assets/imagens/macarrao.jpeg')
+                    name:'Viagem para outro estado',
+                    description: 'Te levo pela outro estado',
+                    price: 60,
+                    image: require('../assets/imagens/uber.jpg')
                     },
             ]
 
