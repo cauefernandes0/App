@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectOption } from './src/pages/slices/optionSlice';
 import { removeFromCart, selectCartItems, selectCartTotal } from './src/pages/slices/cartSlice';
 import { useEffect, useState} from 'react';
+import { urlFor } from './sanity';
 
 export default function CartScreen(){
     const work = useSelector(selectOption);
@@ -69,11 +70,11 @@ export default function CartScreen(){
                             <Text className='font-bold' style={{color: themeColors.text}}>
                                 {items.length} x
                             </Text>
-                            <Image className="h-14 w-14 rounded-full" source={dish.image}/>
+                            <Image className="h-14 w-14 rounded-full" source={{uri: urlFor(dish.image).url()}}/>
                             <Text className="flex-1 font-bold text-gray-700">{dish.name}</Text>
                             <Text className="font-semibold text-base">R${dish.price}</Text>
                             <TouchableOpacity 
-                                onPress ={()=> dispatch(removeFromCart({id: dish.id}))}
+                                onPress ={()=> dispatch(removeFromCart({id: dish._id}))}
                                 className="p-1 rounded-full"
                                 style={{backgroundColor: themeColors.bgColor(1)}}>
                                 <Icon.Minus strokeWidth={2} height={20} width={20} stroke="white"/>

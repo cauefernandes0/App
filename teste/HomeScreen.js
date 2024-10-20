@@ -7,9 +7,19 @@ import { themeColors } from './index';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Categories from './src/pages/categories';
 import FeaturedRow from './src/pages/featuredrow';
-import { featured } from './constantes/index';
+import { useEffect } from 'react';
+import { getFeaturedOptions } from './api';
+import { useState } from 'react';
 
 export default function HomeScreen(){
+
+    const [featuredOptions, setFeaturedOptions] = useState([]);
+
+    useEffect(()=>{
+      getFeaturedOptions().then(data=>{
+        setFeaturedOptions(data);
+      })
+    })  
     return (
       /* Hex Colors
       #D9BBF9
@@ -47,12 +57,12 @@ export default function HomeScreen(){
 
             <View className="mt-5">
               {
-                [featured, featured, featured].map((item,index)=>{
+                featuredOptions.map((item,index)=>{
                   return(
                     <FeaturedRow
                     key={index}
-                    title = {item.title}
-                    options={item.options}
+                    title = {item.name}
+                    options={item.prestadores}
                     description={item.description}
                     />
                   )

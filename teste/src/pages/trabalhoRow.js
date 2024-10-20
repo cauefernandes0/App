@@ -4,24 +4,25 @@ import React from 'react';
 import { themeColors } from '../../index';
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart, selectCartItemsById } from "./slices/cartSlice";
+import { urlFor } from "../../sanity";
 
 
 
 export default function TrabalhoRow({item}){
 
     const dispatch = useDispatch();
-    const totalItems = useSelector(state=>selectCartItemsById(state, item.id));
+    const totalItems = useSelector(state=>selectCartItemsById(state, item._id));
 
     const handleIncrease = ()=>{
         dispatch(addToCart({...item}))
     }
     const handleDecrease = ()=>{
-        dispatch(removeFromCart({id: item.id}))
+        dispatch(removeFromCart({id: item._id}))
     }
     return(
         <View className="flex-row items-center p-3 rounded-3xl shadow-2xl mb-3 mx-2"
         style={{backgroundColor: "#f2f2f2"}}>
-            <Image className='rounded-3xl' style={{height:100, width:100}} source={item.image}/>
+            <Image className='rounded-3xl' style={{height:100, width:100}} source={{uri: urlFor(item.image).url()}}/>
             <View className='flex flex-1 space-y-3'>
                 <View className='pl-3'>
                     <Text className='text-xl'>{item.name}</Text>

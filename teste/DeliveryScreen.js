@@ -1,31 +1,35 @@
 import { View, Text, TouchableOpacity,Image} from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { featured } from './constantes';
 import MapView, {Marker} from 'react-native-maps';
 import { themeColors } from './index';
 import * as Icon from "react-native-feather";
 import { useDispatch, useSelector } from 'react-redux';
 import { selectOption } from './src/pages/slices/optionSlice';
 import { emptyCart } from './src/pages/slices/cartSlice';
+import {useRoute} from '@react-navigation/native';
+import {useEffect} from 'react';
+import { urlFor } from './sanity';
 
 
 
 export default function Delivery(){
+    
     const work = useSelector(selectOption);
+
     const navigation = useNavigation();
     const dispatch= useDispatch();
-
     const cancelOrder= ()=>{
-        navigation.navigate('Home');
+       navigation.navigate('Home');
         dispatch(emptyCart());
     }
+    
     return(
         <View className="flex-1">
             {/*map view*/}
             <MapView initialRegion={{
                 latitude: work.lat,
-                longitude: work.lng,
+                longitude: work.lnt,
                 latitudeDelta: 0.01,
                 longitudeDelta: 0.01,
             }}
@@ -34,7 +38,7 @@ export default function Delivery(){
             >
                 <Marker coordinate={{
                      latitude: work.lat,
-                     longitude: work.lng,
+                     longitude: work.lnt,
                 }}
                 title={work.name}
                 description={work.description}
@@ -60,10 +64,10 @@ export default function Delivery(){
                     <View className="p-1 rounded-full"
                     style={{backgroundColor: 'rgba(255,255,255,0.4)'}}>
                         <Image className="h-16 w-16 rounded-full"
-                        source={require("./assets/imagens/psychologist.png")}/>
+                        source={{uri: urlFor(work.image).url()}}/>
                     </View>
                     <View className="flex-1 ml-3">
-                        <Text className="text-lg font-bold text-white">Joana Oliveira</Text>
+                        <Text className="text-lg font-bold text-white">{work.name}</Text>
                         <Text className="font-semibold text-white">Sua Prestadora</Text>
                     </View>
                     <View className="flex-row items-center space-x-3 mr-3">

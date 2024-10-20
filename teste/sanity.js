@@ -3,8 +3,8 @@ import sanityClient from '@sanity/client';
 import imageBuilder from '@sanity/image-url';
 
 const client = createClient({
-    projectId: '',
-    datased: 'production',
+    projectId: 'd6qghgcc',
+    dataset: 'production',
     useCdn: true,
     apiVersion: '2024-10-19'
 })

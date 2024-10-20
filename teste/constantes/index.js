@@ -40,7 +40,7 @@ export const featured = {
         {
             id:1,
             name: 'Joana Oliveira',
-            image: require('../assets/imagens/pia.jpg'),
+            image: require('../assets/imagens/pia.png'),
             description: "Problema com encanamento? É so me chamar!",
             inf: "Resido na Zona Norte de São Paulo, porém vou até qualquer localização! Caso seja necessário qualquer contato mais específico, tenho também meu WhatsApp. Em caso de necessidade de atuação à noite, o valor do trabalho pode variar, porém sempre negocio para o melhor de todos ",
             loc:'São Paulo - SP',

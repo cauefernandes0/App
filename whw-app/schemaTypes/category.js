@@ -18,7 +18,7 @@ export default defineType({
       validation: rule => rule.required(),
     },
     {
-      name: 'image',
+      name: 'imagem',
       type: 'image',
       title: 'Imagem da categoria',
 

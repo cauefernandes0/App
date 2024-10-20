@@ -9,6 +9,7 @@ import CartIcon from "./src/pages/cartIcon";
 import {useEffect} from 'react';
 import { useDispatch } from "react-redux";
 import { setOption } from "./src/pages/slices/optionSlice";
+import { urlFor } from "./sanity";
 
 export default function OptionScreen() {
     
@@ -18,7 +19,7 @@ export default function OptionScreen() {
     const dispatch = useDispatch();
      // console.log('Opções:',item)
     useEffect(()=>{
-        if(item && item.id){
+        if(item && item._id){
             dispatch(setOption({...item}))
         }
     },[])
@@ -32,7 +33,7 @@ export default function OptionScreen() {
                
                 
                 <View className="relative">
-                    <Image className='w-full h-72' source={item.image}/>
+                    <Image className='w-full h-72' source={{uri: urlFor(item.image).url()}}/>
                     <TouchableOpacity 
                     onPress={() => navigation.goBack()}
                     className='absolute top-14 left-4 bg-gray-50 p-2 rounded-full shadow'>
@@ -50,13 +51,13 @@ export default function OptionScreen() {
                             <Image source={require("./assets/imagens/star.png")} className="h-4 w-4"/>
                             <Text className="text-xs">
                                 <Text className="text-green-700">{item.stars}</Text>
-                                <Text className="text-gray-700">({item.reviews} review) . <Text className="font-semibold">{item.category}</Text>
+                                <Text className="text-gray-700">({item.reviews}mil reviews) . <Text className="font-semibold">{item?.type?.name}</Text>
                                 </Text>
                             </Text>
                         </View>
                         <View className="flex-row items-center space-x-1">
                             <Icon.MapPin color="gray" width="15" height="15"/>
-                            <Text className="text-gray-700 text-xs">Em {item.loc}</Text>
+                            <Text className="text-gray-700 text-xs">Em {item.adress}</Text>
                         </View>
                     </View>
                     <Text className="text-gray-500 mt-2"> {item.description}</Text>
@@ -67,7 +68,7 @@ export default function OptionScreen() {
                 <Text className="px-4 py-2"> {item.inf}</Text>
                 <Text className='px-4 py-4 text-2xl font-bold'>Opções</Text>
                 {
-                    item.trabalhos.map((trabalho,index)=> <TrabalhoRow item={{...trabalho}} key={index} />)
+                    item.work.map((work,index)=> <TrabalhoRow item={{...work}} key={index} />)
                 }
 
             </View>
