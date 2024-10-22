@@ -6,4 +6,5 @@ import workschema from './workschema'
 import featured from './featured'
 import option from './option'
 
+
 export const schemaTypes = [category, workschema, featured, option]

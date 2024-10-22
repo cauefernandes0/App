@@ -23,6 +23,12 @@ export default {
       title: 'Imagem do Prestador',
     },
     {
+      name: 'inf',
+      type: 'string',
+      title: 'Mais Informações do Profissional',
+      validation: rule => rule.max(300),
+    },
+    {
       name: 'lat',
       type: 'number',
       title: 'Latitude do Profissional',
