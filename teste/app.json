@@ -15,19 +15,19 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.imc.app",
+      "bundleIdentifier": "com.whw.app",
       "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.imc.app",
+      "package": "com.whw.app",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#ffffff"
       }
     },
-    "web": {
+  "web": {
       "favicon": "./assets/logo.png"
     },
     "extra": {
