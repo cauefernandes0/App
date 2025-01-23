@@ -1,4 +1,4 @@
-<img width="100%" src=".github/screens/screens.png">
+<img width="100%" src="./screens/screens.png">
 
 # Indice
 
