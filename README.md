@@ -28,7 +28,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 <h3 align="center" >Vamos nos conectar 😉</h3>
 <p align="center">
   <a href="https://www.linkedin.com/in/caue-fernandes/">
-    <img alt="LinkedIn" width="22px" src="https://github.com/ca/filipeleonelbatista/blob/master/assets/052-linkedin.svg" />
+    <img alt="LinkedIn" width="22px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" />
   </a>&ensp;
   <a href="mailto:caue.fsantos@outlook.com">
     <img alt="Email" width="22px" src="https://github.com/filipeleonelbatista/filipeleonelbatista/blob/master/assets/gmail.svg" />
